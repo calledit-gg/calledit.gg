@@ -1,0 +1,15 @@
+{% extends "pickems/base.html" %}
+{% block content %}
+<h1>Tournaments</h1>
+{% if tournaments %}
+  <ul class="tournament-list">
+    {% for t in tournaments %}
+      <li><a href="{{ t.url }}">{{ t.name }}</a>
+        {% if t.start_date %}<span class="muted">{{ t.start_date }}</span>{% endif %}
+        {% if not t.is_published %}<span class="badge">hidden</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="muted">No tournaments yet. Add one in the admin and tick “Is published”.</p>
+{% endif %}
+{% endblock %}

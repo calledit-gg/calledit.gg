@@ -1,0 +1,11 @@
+# local environment and editor files
+venv/
+.venv/
+.idea/
+__pycache__/
+*.pyc
+
+# local database (your tournaments are exported to docs/ instead)
+db.sqlite3
+
+# NOT ignored on purpose: docs/ (the published site) and media/ (team logos)

@@ -1,0 +1,16 @@
+{% extends "pickems/base.html" %}
+{% block title %}{{ tournament.name }} - CalledIt.gg{% endblock %}
+{% block content %}
+<h1>{{ tournament.name }}</h1>
+<div id="banner-slot"></div>
+<p class="muted" id="edit-hint">Click a team to pick the winner of a match.</p>
+<div id="save-bar-slot"></div>
+<div id="stages"></div>
+{{ stages|json_script:"tournament-data" }}
+{{ config|json_script:"page-config" }}
+{% endblock %}
+{% block scripts %}
+<script src="{{ root }}static/pickems/engine.js"></script>
+<script src="{{ root }}static/pickems/card.js"></script>
+<script src="{{ root }}static/pickems/bracket.js"></script>
+{% endblock %}

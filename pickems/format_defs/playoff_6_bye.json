@@ -1,0 +1,16 @@
+{
+  "key": "playoff_6_bye",
+  "name": "Playoffs, 6 teams (group winners skip to semi-finals)",
+  "team_count": 6,
+  "matches": [
+    {"id": "QF1", "round": "Quarter-finals", "a": {"seed": 1}, "b": {"seed": 2}},
+    {"id": "QF2", "round": "Quarter-finals", "a": {"seed": 3}, "b": {"seed": 4}},
+    {"id": "SF1", "round": "Semi-finals",    "a": {"seed": 5}, "b": {"winner": "QF1"}},
+    {"id": "SF2", "round": "Semi-finals",    "a": {"seed": 6}, "b": {"winner": "QF2"}},
+    {"id": "F",   "round": "Grand final",    "a": {"winner": "SF1"}, "b": {"winner": "SF2"}}
+  ],
+  "results": [
+    {"label": "Champion",  "source": {"winner": "F"}},
+    {"label": "Runner-up", "source": {"loser": "F"}}
+  ]
+}

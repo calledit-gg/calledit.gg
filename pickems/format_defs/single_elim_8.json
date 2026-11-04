@@ -1,0 +1,18 @@
+{
+  "key": "single_elim_8",
+  "name": "Single elimination, 8 teams",
+  "team_count": 8,
+  "matches": [
+    {"id": "QF1", "round": "Quarter-finals", "a": {"seed": 1}, "b": {"seed": 2}},
+    {"id": "QF2", "round": "Quarter-finals", "a": {"seed": 3}, "b": {"seed": 4}},
+    {"id": "QF3", "round": "Quarter-finals", "a": {"seed": 5}, "b": {"seed": 6}},
+    {"id": "QF4", "round": "Quarter-finals", "a": {"seed": 7}, "b": {"seed": 8}},
+    {"id": "SF1", "round": "Semi-finals",    "a": {"winner": "QF1"}, "b": {"winner": "QF2"}},
+    {"id": "SF2", "round": "Semi-finals",    "a": {"winner": "QF3"}, "b": {"winner": "QF4"}},
+    {"id": "F",   "round": "Grand final",    "a": {"winner": "SF1"}, "b": {"winner": "SF2"}}
+  ],
+  "results": [
+    {"label": "Champion",  "source": {"winner": "F"}},
+    {"label": "Runner-up", "source": {"loser": "F"}}
+  ]
+}
