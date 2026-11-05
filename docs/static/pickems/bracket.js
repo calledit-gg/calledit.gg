@@ -150,6 +150,8 @@
 
   /* ---- shared (read-only) banner ---- */
   var plainUrl = location.href.split("#")[0];
+  // on a real website "…/t/slug/index.html" and "…/t/slug/" are the same page: share the short one
+  if (/^https?:$/.test(location.protocol)) plainUrl = plainUrl.replace(/index\.html$/, "");
 
   if (readonly) {
     var bannerSlot = document.getElementById("banner-slot");

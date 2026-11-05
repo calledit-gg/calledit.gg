@@ -1,0 +1,16 @@
+{
+  "key": "double_elim_4_top3",
+  "name": "Double elimination GSL, 4 teams (top 3 advance)",
+  "team_count": 4,
+  "matches": [
+    {"id": "UB1", "round": "Upper: opening round", "a": {"seed": 1}, "b": {"seed": 2}},
+    {"id": "UB2", "round": "Upper: opening round", "a": {"seed": 3}, "b": {"seed": 4}},
+    {"id": "UB3", "round": "Upper: final",         "a": {"winner": "UB1"}, "b": {"winner": "UB2"}},
+    {"id": "LB1", "round": "Lower: final",         "a": {"loser": "UB1"},  "b": {"loser": "UB2"}}
+  ],
+  "results": [
+    {"label": "Advances (upper final winner)", "source": {"winner": "UB3"}},
+    {"label": "Advances (upper final loser)",  "source": {"loser": "UB3"}},
+    {"label": "Advances (lower final winner)", "source": {"winner": "LB1"}}
+  ]
+}

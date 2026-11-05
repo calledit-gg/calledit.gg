@@ -39,8 +39,8 @@ class Command(BaseCommand):
             home_context(
                 tournaments,
                 root="",
-                home_url="index.html",
-                tournament_url=lambda slug: f"t/{slug}/index.html",
+                home_url="./",
+                tournament_url=lambda slug: f"t/{slug}/",
             ),
         )
         (out / "index.html").write_text(html, encoding="utf-8")
@@ -48,7 +48,7 @@ class Command(BaseCommand):
         copied = set()
         for t in tournaments:
             ctx = tournament_context(
-                t, root="../../", home_url="../../index.html", media_prefix="../../media/"
+                t, root="../../", home_url="../../", media_prefix="../../media/"
             )
             page_dir = out / "t" / t.slug
             page_dir.mkdir(parents=True, exist_ok=True)
